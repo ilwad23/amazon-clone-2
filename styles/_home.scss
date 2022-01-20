@@ -1,0 +1,21 @@
+@use "./util" as *;
+.nav {
+  background-color: navy;
+  &__top {
+  }
+  &__input {
+    display: flex;
+    background-color: slateblue;
+    flex: 1;
+}
+  &__searchIcon {
+    @include center-div;
+    height: 40px;
+    width: 70px;
+    overflow: hidden;
+    .icon {
+      height: 30px;
+      width: 50px;
+    }
+  }
+}
