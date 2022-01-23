@@ -11,23 +11,23 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className="nav w-screen">
-        <div className="nav__top flex w-screen">
-          <Image
-            src="https://links.papareact.com/f90"
-            width={150}
-            height={40}
-            objectFit="contain"
-            alt="logo"
-          />
-          
-          <div className="nav__input ">
-            <input type="text" className='flex-1'/>
-            <div className="nav__searchIcon bg-orange-400">
-              <SearchIcon className='icon'/>
-            </div>
+        <div className="navTop flex items-center bg-amazonBlue p-1 flex-grow py-2">
+          <div className="navTop__logo flex-grow sm:flew-grow-0">
+            <Image
+              src="https://links.papareact.com/f90"
+              width={150}
+              height={40}
+              objectFit="contain"
+              alt="logo"
+              className="cursor-pointer"
+            />
           </div>
+          {/* <div className="navTop__searchBar bg-yellow-400">
+            <input type="text" className="" />
+              <SearchIcon className="icon" />
+          </div> */}
         </div>
-        <div className="nav__bottom"></div>
+        <div className="navBottom"></div>
       </nav>
       <main></main>
     </div>

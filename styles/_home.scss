@@ -1,21 +1,20 @@
-@use "./util" as *;
-.nav {
-  background-color: navy;
-  &__top {
-  }
-  &__input {
-    display: flex;
-    background-color: slateblue;
-    flex: 1;
-}
-  &__searchIcon {
-    @include center-div;
-    height: 40px;
-    width: 70px;
-    overflow: hidden;
-    .icon {
-      height: 30px;
-      width: 50px;
-    }
-  }
-}
+// @use "./util" as *;
+// .navTop {
+//   @include flex;
+//   background-color: $amazon-blue;
+//   padding: rem(8) rem(4);
+//   &__logo {
+//     @include flex;
+//     margin-top: rem(8);
+  
+//   }
+//   &__searchBar {
+//     display: flex;
+//     flex: 1;
+//     height: 35px;
+//   }
+//     .icon {
+//       height: 12rem;
+//       padding: 4rem;
+//   }
+// }

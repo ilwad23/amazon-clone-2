@@ -7,16 +7,11 @@
 }
 
 // * flex row
-@mixin flex-row($align: center, $justify: space-between) {
+@mixin flex($align: center, $justify: space-between, $dir: row) {
   display: flex;
   align-items: $align;
   justify-content: $justify;
-}
-@mixin flex-col($align: center, $justify: space-between) {
-  display: flex;
-  align-items: $align;
-  justify-content: $justify;
-  flex-direction: column;
+  flex-direction: $dir;
 }
 
 // * position
@@ -46,8 +41,4 @@
   width: $width;
 }
 // * specific mixins
-@mixin btn($border, $clr, $bg) {
-  background: $bg;
-  border: $border;
-  color: $clr;
-}
+
