@@ -1,0 +1,102 @@
+@use "../util" as *;
+.navTop {
+  @include flex;
+  background-color: $amazon-blue;
+  padding: rem(8) rem(4);
+  overflow: scroll;
+  & > div {
+    margin-right: 10px;
+  }
+  &__logo {
+    @include flex;
+    &:hover,
+    &:focus {
+      border: 1px solid #ffffff;
+    }
+  }
+  &__searchBar {
+    border-radius: 4px;
+    display: flex;
+    height: 40px;
+    overflow: hidden;
+    input {
+      flex: 1;
+    }
+  }
+  &__searchIcon {
+    background-color: $amazon-yellow;
+    color: #000;
+    height: 100%;
+    width: 40px;
+    &:hover,
+    &:focus {
+      background-color: $amazon-yellow-hover;
+    }
+  }
+  &__links {
+    @include flex;
+    overflow: scroll;
+    color: white;
+    font-size: smaller;
+    & > div {
+      width: max-content;
+      padding: 10px;
+      font-weight: light;
+      padding-right: 1vw;
+      &:hover,
+      &:focus {
+        border: 1px solid #ffffff;
+      }
+      h3 {
+        font-weight: bolder;
+      }
+    }
+  }
+
+  @include up-mobile {
+    &__searchBar {
+      flex: 1;
+    }
+    &__basket {
+      @include flex($align: flex-end);
+    }
+    &__iconWrapper {
+      height: 40px;
+      width: 40px;
+      position: relative;
+    }
+    &__num {
+      @include center-div;
+      @include pos-ab-t-r(10);
+      background-color: $amazon-yellow;
+      border-radius: 100px;
+      color: #000;
+      font-size: 10px;
+      font-weight: bolder;
+      width: 15px;
+      height: 15px;
+    }
+  }
+  @include down-tablet {
+    &__basket h3 {
+      word-wrap: keep-all;
+      align-self: end;
+    }
+    &__link {
+      font-size: smaller;
+      padding: 3px;
+    }
+  }
+  @include down-mobile {
+    &__iconWrapper,
+    &__input {
+      display: none;
+    }
+  }
+}
+.navBottom {
+  @include flex();
+  background-color: $amazon-blue-light;
+  // padding: rem(8) rem(4);
+  overflow: scroll;
+}
