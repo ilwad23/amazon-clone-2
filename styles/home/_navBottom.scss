@@ -1,0 +1,40 @@
+@use "../util" as *;
+.nav {
+    background-color: red;
+}
+.navBottom {
+  @include flex($justify: flex-start);
+  background-color: $amazon-blue-light;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  overflow: scroll;
+  padding: rem(2) rem(15);
+  width:100%;
+  word-wrap: keep-all;
+  
+  &__menu {
+      @include flex($justify: center);
+      padding: 2px 6px;
+      margin-left: 4px;
+      &:hover,
+      &:focus {
+          border: 1px solid #ffffff;
+        }
+    }
+      p {
+          width: max-content;
+      word-wrap: keep-all;
+
+  }
+  // &__menu,
+  // p {
+  //     // padding: 2px 6px;
+  //     // margin-left: 4px;
+  //   }
+  &__icon {
+    @include size(22px, 22px);
+    padding-right: 3px;
+  }
+}

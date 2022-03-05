@@ -4,6 +4,9 @@
   background-color: $amazon-blue;
   padding: rem(8) rem(4);
   overflow: scroll;
+  word-wrap: keep-all;
+  width: 100vw;
+  min-width: max-content;
   & > div {
     margin-right: 10px;
   }
@@ -19,9 +22,6 @@
     display: flex;
     height: 40px;
     overflow: hidden;
-    input {
-      flex: 1;
-    }
   }
   &__searchIcon {
     background-color: $amazon-yellow;
@@ -35,9 +35,9 @@
   }
   &__links {
     @include flex;
-    overflow: scroll;
     color: white;
     font-size: smaller;
+    word-wrap: keep-all;
     & > div {
       width: max-content;
       padding: 10px;
@@ -48,13 +48,16 @@
         border: 1px solid #ffffff;
       }
       h3 {
+        width: max-content;
+        word-wrap: keep-all;
         font-weight: bolder;
       }
     }
   }
 
   @include up-mobile {
-    &__searchBar {
+    &__searchBar,
+    &__input {
       flex: 1;
     }
     &__basket {
@@ -88,15 +91,10 @@
     }
   }
   @include down-mobile {
+    // min-width: max-content;
     &__iconWrapper,
     &__input {
       display: none;
     }
   }
-}
-.navBottom {
-  @include flex();
-  background-color: $amazon-blue-light;
-  // padding: rem(8) rem(4);
-  overflow: scroll;
 }

@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="description" content="Amazon clone" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className="nav">
+      <nav className="nav ">
         <div className="navTop">
           <div className="navTop__logo">
             <Image
@@ -50,18 +50,34 @@ export default function Home() {
           </div>
         </div>
         <div className="navBottom">
-          <div className="menu">
-            <MenuIcon />
-            <p>All</p>
+          <div className="navBottom__menu">
+            <MenuIcon className="navBottom__icon" />
+            <p className=''>All</p>
           </div>
-          <p>Prime Video</p>
-          <p>Prime Video</p>
-          <p>Prime Video</p>
-          <p>Prime Video</p>
-          <p>Prime Video</p>
-          <p>Prime Video</p>
-          <p>Prime Video</p>
-          <p>Prime Video</p>
+          <div className="navBottom__menu">
+            <p className=''>Prime Video</p>
+          </div>
+          <div className="navBottom__menu">
+            <p className=''>Prime Video</p>
+          </div>
+          <div className="navBottom__menu">
+            <p className=''>Prime Video</p>
+          </div>
+          <div className="navBottom__menu">
+            <p className=''>Prime Video</p>
+          </div>
+          <div className="navBottom__menu">
+            <p className=''>Prime Video</p>
+          </div>
+          <div className="navBottom__menu">
+            <p className=''>Prime Video</p>
+          </div>
+          <div className="navBottom__menu">
+            <p className=''>Prime Video</p>
+          </div>
+          <div className="navBottom__menu">
+            <p className=''>Prime Video</p>
+          </div>
         </div>
       </nav>
       <main></main>
