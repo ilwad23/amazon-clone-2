@@ -11,14 +11,13 @@
   line-height: 19px;
   overflow: scroll;
   padding: rem(2) rem(15);
-  width:2000vw;
+  width:100vw;
   word-wrap: keep-all;
   
   &__menu {
       @include flex($justify: center);
       padding: 2px 6px;
       margin-left: 4px;
-      width: 100%;
       &:hover,
       &:focus {
           border: 1px solid #ffffff;
