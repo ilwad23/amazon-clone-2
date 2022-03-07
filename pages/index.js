@@ -26,7 +26,7 @@ export default function Home() {
           </div>
 
           <div className="navTop__searchBar">
-            <input type="text" className="navTop__input" />
+            <input type="text" className="navTop__input " />
             <SearchIcon className="navTop__searchIcon" />
           </div>
           <div className="navTop__links">
@@ -52,31 +52,33 @@ export default function Home() {
         <div className="navBottom">
           <div className="navBottom__menu">
             <MenuIcon className="navBottom__icon" />
-            <p className=''>All</p>
+            <p className="">All</p>
           </div>
-          <div className="navBottom__menu">
-            <p className=''>Prime Video</p>
-          </div>
-          <div className="navBottom__menu">
-            <p className=''>Prime Video</p>
-          </div>
-          <div className="navBottom__menu">
-            <p className=''>Prime Video</p>
-          </div>
-          <div className="navBottom__menu">
-            <p className=''>Prime Video</p>
-          </div>
-          <div className="navBottom__menu">
-            <p className=''>Prime Video</p>
-          </div>
-          <div className="navBottom__menu">
-            <p className=''>Prime Video</p>
-          </div>
-          <div className="navBottom__menu">
-            <p className=''>Prime Video</p>
-          </div>
-          <div className="navBottom__menu">
-            <p className=''>Prime Video</p>
+          <div className="navBottom__links">
+            <div className="navBottom__menu">
+              <p className="">Prime Video</p>
+            </div>
+            <div className="navBottom__menu">
+              <p className="">Prime Video</p>
+            </div>
+            <div className="navBottom__menu">
+              <p className="">Prime Video</p>
+            </div>
+            <div className="navBottom__menu">
+              <p className="">Prime Video</p>
+            </div>
+            <div className="navBottom__menu">
+              <p className="">Prime Video</p>
+            </div>
+            <div className="navBottom__menu">
+              <p className="">Prime Video</p>
+            </div>
+            <div className="navBottom__menu">
+              <p className="">Prime Video</p>
+            </div>
+            <div className="navBottom__menu">
+              <p className="">Prime Video</p>
+            </div>
           </div>
         </div>
       </nav>

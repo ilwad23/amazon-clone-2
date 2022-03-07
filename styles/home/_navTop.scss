@@ -5,13 +5,15 @@
   padding: rem(8) rem(4);
   overflow: scroll;
   word-wrap: keep-all;
-  width: 100vw;
-  min-width: max-content;
+  
   & > div {
     margin-right: 10px;
   }
   &__logo {
-    @include flex;
+    // @include flex;
+    flex-shrink: 0;
+    width: 150px !important;
+    height: 40px !important;
     &:hover,
     &:focus {
       border: 1px solid #ffffff;
@@ -20,7 +22,9 @@
   &__searchBar {
     border-radius: 4px;
     display: flex;
+    flex-shrink: 0;
     height: 40px;
+    width: 40px;
     overflow: hidden;
   }
   &__searchIcon {
@@ -54,30 +58,30 @@
       }
     }
   }
+  &__basket {
+    @include flex($align: flex-end);
+  }
+  &__iconWrapper {
+    min-height: 40px;
+    min-width: 40px;
+    position: relative;
+  }
 
+  &__num {
+    @include center-div;
+    @include pos-ab-t-r(10);
+    background-color: $amazon-yellow;
+    border-radius: 100px;
+    color: #000;
+    font-size: 10px;
+    font-weight: bolder;
+    width: 15px;
+    height: 15px;
+  }
   @include up-mobile {
     &__searchBar,
     &__input {
       flex: 1;
-    }
-    &__basket {
-      @include flex($align: flex-end);
-    }
-    &__iconWrapper {
-      height: 40px;
-      width: 40px;
-      position: relative;
-    }
-    &__num {
-      @include center-div;
-      @include pos-ab-t-r(10);
-      background-color: $amazon-yellow;
-      border-radius: 100px;
-      color: #000;
-      font-size: 10px;
-      font-weight: bolder;
-      width: 15px;
-      height: 15px;
     }
   }
   @include down-tablet {
@@ -91,9 +95,9 @@
     }
   }
   @include down-mobile {
-    // min-width: max-content;
     &__iconWrapper,
-    &__input {
+    &__input
+     {
       display: none;
     }
   }

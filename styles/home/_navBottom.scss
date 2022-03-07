@@ -1,6 +1,7 @@
 @use "../util" as *;
 .nav {
-    background-color: red;
+  background-color: $amazon-blue;
+  width: 100vw;
 }
 .navBottom {
   @include flex($justify: flex-start);
@@ -11,22 +12,25 @@
   line-height: 19px;
   overflow: scroll;
   padding: rem(2) rem(15);
-  width:100vw;
   word-wrap: keep-all;
-  
-  &__menu {
-      @include flex($justify: center);
-      padding: 2px 6px;
-      margin-left: 4px;
-      &:hover,
-      &:focus {
-          border: 1px solid #ffffff;
-        }
-    }
-      p {
-          width: max-content;
-      word-wrap: keep-all;
 
+  &__menu {
+    @include flex($justify: center);
+    padding: 2px 6px;
+    margin-left: 4px;
+    &:hover,
+    &:focus {
+      border: 1px solid #ffffff;
+    }
+  }
+  &__links {
+    @include flex($justify: flex-start);
+    p {
+      color: rgb(224, 224, 224);
+      font-family: 100;
+      width: max-content;
+      word-wrap: keep-all;
+    }
   }
   // &__menu,
   // p {
