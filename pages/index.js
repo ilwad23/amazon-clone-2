@@ -1,10 +1,16 @@
 import Head from "next/head";
+import { useState } from "react";
 import Image from "next/image";
 import { SearchIcon } from "@heroicons/react/outline";
 import { ShoppingCartIcon } from "@heroicons/react/outline";
 import { MenuIcon } from "@heroicons/react/outline";
-
+import { useMediaMatcher } from "../util/hooks";
 export default function Home() {
+  const [isFinishedTyping, setIsFinishedTyping] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const [search, setSearch] = useState(false);
+  const mobile = useMediaMatcher();
+  console.log(mobile);
   return (
     <div>
       <Head>
@@ -25,8 +31,13 @@ export default function Home() {
             />
           </div>
 
-          <div className="navTop__searchBar">
-            <input type="text" className="navTop__input " />
+          <div className="navTop__searchBar" onClick={(e) => setSearch(e)}>
+            <input
+              type="text"
+              className="navTop__input "
+              // onBlur={(e) => setIsFinishedTyping(true)}
+              // onBlur={(e) => setInputValue(e.target.hidden)}
+            />
             <SearchIcon className="navTop__searchIcon" />
           </div>
           <div className="navTop__links">
