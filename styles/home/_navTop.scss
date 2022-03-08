@@ -5,7 +5,7 @@
   padding: rem(8) rem(4);
   overflow: scroll;
   word-wrap: keep-all;
-  
+
   & > div {
     margin-right: 10px;
   }
@@ -95,9 +95,9 @@
     }
   }
   @include down-mobile {
+    padding: rem(12) rem(2);
     &__iconWrapper,
-    &__input
-     {
+    &__input {
       display: none;
     }
   }
