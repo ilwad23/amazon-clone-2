@@ -29,13 +29,17 @@
   }
   &__searchIcon {
     background-color: $amazon-yellow;
-    color: #000;
-    height: 100%;
     width: 40px;
+    flex-shrink: 0;
+    color: #000;
+    overflow: hidden;
     &:hover,
     &:focus {
       background-color: $amazon-yellow-hover;
     }
+  }
+  &__input, &__searchIcon {
+    height: 40px;
   }
   &__links {
     @include flex;
@@ -79,8 +83,9 @@
     height: 15px;
   }
   @include up-mobile {
-    &__searchBar,
-    &__input {
+    &__input, 
+    &__searchBar
+    {
       flex: 1;
     }
   }
@@ -96,8 +101,13 @@
   }
   @include down-mobile {
     padding: rem(12) rem(2);
-    &__iconWrapper,
-    &__input {
+    &__searchBar-mobile {
+      padding: rem(2) rem(7);
+      flex: 1;
+
+    }
+    &__iconWrapper
+     {
       display: none;
     }
   }
