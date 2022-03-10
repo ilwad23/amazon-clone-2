@@ -6,11 +6,9 @@ import { ShoppingCartIcon } from "@heroicons/react/outline";
 import { MenuIcon } from "@heroicons/react/outline";
 import { useMediaMatcher } from "../util/hooks";
 export default function Home() {
-  const [isFinishedTyping, setIsFinishedTyping] = useState(false);
-  const [inputValue, setInputValue] = useState("");
   const [search, setSearch] = useState(false);
   const mobile = useMediaMatcher();
-  console.log(mobile);
+  console.log(search);
   return (
     <div>
       <Head>
@@ -20,7 +18,7 @@ export default function Home() {
       </Head>
       <nav className="nav ">
         <div className="navTop">
-          <div className="navTop__logo">
+          <div className={`${mobile && search ? "hidden" : "navTop__logo"}`}>
             <Image
               src="https://links.papareact.com/f90"
               width={150}
@@ -31,16 +29,21 @@ export default function Home() {
             />
           </div>
 
-          <div className="navTop__searchBar" onClick={(e) => setSearch(e)}>
+          <div
+            className={`navTop__searchBar ${
+              mobile && search? "navTop__searchBar-mobile":" "
+            }`}
+          >
             <input
               type="text"
-              className="navTop__input "
-              // onBlur={(e) => setIsFinishedTyping(true)}
-              // onBlur={(e) => setInputValue(e.target.hidden)}
+              className={`navTop__input ${
+                mobile && search ? "flex-1" : mobile ? "hidden":""
+              }`}
+              onBlur={(e) => setSearch(false)}
             />
-            <SearchIcon className="navTop__searchIcon" />
+            <SearchIcon className="navTop__searchIcon" onClick={()=>setSearch(!search)} />
           </div>
-          <div className="navTop__links">
+          <div className={`${mobile && search ? "hidden" : "navTop__links"}`}>
             <div className="navTop__link">
               <p>hello, user</p>
               <h3>Account & List</h3>
