@@ -1,4 +1,4 @@
-@use "../util" as *;
+@use "../../util" as *;
 .navTop {
   @include flex;
   background-color: $amazon-blue;

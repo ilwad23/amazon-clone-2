@@ -1,2 +1,3 @@
-@forward './navTop';
-@forward './navBottom'
+@use "./nav" as *;
+@use "./main" as *;
+
