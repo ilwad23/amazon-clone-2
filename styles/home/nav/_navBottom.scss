@@ -1,8 +1,5 @@
 @use "../../util" as *;
-.nav {
-  background-color: $amazon-blue;
-  width: 100vw;
-}
+
 .navBottom {
   @include flex($justify: flex-start);
   background-color: $amazon-blue-light;

@@ -1,1 +1,7 @@
-@forward './navTop';
+@forward "./navTop";
+@forward "./navBottom";
+@use "../../util" as *;
+.nav {
+  background-color: $amazon-blue;
+  width: 100vw;
+}

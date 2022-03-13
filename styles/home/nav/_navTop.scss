@@ -38,7 +38,8 @@
       background-color: $amazon-yellow-hover;
     }
   }
-  &__input, &__searchIcon {
+  &__input,
+  &__searchIcon {
     height: 40px;
   }
   &__links {
@@ -83,9 +84,8 @@
     height: 15px;
   }
   @include up-mobile {
-    &__input, 
-    &__searchBar
-    {
+    &__input,
+    &__searchBar {
       flex: 1;
     }
   }
@@ -104,10 +104,9 @@
     &__searchBar-mobile {
       padding: rem(2) rem(7);
       flex: 1;
-
     }
-    &__iconWrapper
-     {
+    &__input-mobile,
+    &__iconWrapper {
       display: none;
     }
   }

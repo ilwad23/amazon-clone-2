@@ -11,15 +11,18 @@ export default function Home() {
       </Head>
       <body>
         <Nav />
-        {/* <main>
+        <main>
           <div className="banner">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://links.papareact.com/gi1"
-              alt="logo"
+              loading="lazy"
+              alt="banner"
               className="cursor-pointer"
             />
+            <div className="banner__shadow"></div>
           </div>
-        </main> */}
+        </main>
       </body>
     </div>
   );
