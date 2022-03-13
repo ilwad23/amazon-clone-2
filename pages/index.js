@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Nav from "../Component/Nav";
+import Nav from "../components/Nav";
 
 export default function Home() {
-
   return (
     <div>
       <Head>
@@ -10,8 +9,18 @@ export default function Home() {
         <meta name="description" content="Amazon clone" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
-      <main></main>
+      <body>
+        <Nav />
+        {/* <main>
+          <div className="banner">
+            <img
+              src="https://links.papareact.com/gi1"
+              alt="logo"
+              className="cursor-pointer"
+            />
+          </div>
+        </main> */}
+      </body>
     </div>
   );
 }
