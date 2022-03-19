@@ -88,6 +88,7 @@ function Nav() {
           <div className="navBottom__menu">
             <p className="">Prime Video</p>
           </div>
+          
         </div>
       </div>
     </nav>
