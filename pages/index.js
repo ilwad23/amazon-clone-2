@@ -1,7 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import Image from "next/image";
+import Banner from "../components/banner";
 import Nav from "../components/Nav";
 
-export default function Home() {
+import ProductFeed from "../components/ProductFeed";
+
+export default function Home({ products }) {
   return (
     <div>
       <Head>
@@ -9,21 +14,20 @@ export default function Home() {
         <meta name="description" content="Amazon clone" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>
-        <Nav />
-        <main>
-          <div className="banner">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://links.papareact.com/gi1"
-              loading="lazy"
-              alt="banner"
-              className="cursor-pointer"
-            />
-            <div className="banner__shadow"></div>
-          </div>
-        </main>
-      </body>
+      <Nav />
+      <main>
+        <Banner />
+        <ProductFeed products={products} />
+      </main>
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch("https://fakestoreapi.com/products");
+  const products = await res.json();
+
+  return {
+    props: { products },
+  };
+};
