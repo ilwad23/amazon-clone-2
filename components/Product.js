@@ -8,9 +8,10 @@ function Product({
   category,
   rating,
   img,
+  colSpan=1,
 }) {
   return (
-    <div className={`product`}>
+    <div className={`product col-span-${colSpan}`}>
       <p className="product__category">Men’s Collection</p>
       <img
         // src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"

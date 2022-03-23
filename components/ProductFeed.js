@@ -1,6 +1,7 @@
-import React from 'react';import Product from "../components/Product";
+import React from "react";
+import Product from "../components/Product";
 
-function ProductFeed({products}) {
+function ProductFeed({ products }) {
   return (
     <div className="products ">
       {products.slice(0, 4).map((product, i) => (
@@ -31,19 +32,20 @@ function ProductFeed({products}) {
           img={product.image}
         />
       ))}
-      <div className="product__col">
-        {products.slice(6, 7).map((product, i) => (
-          <Product
-            key={product.id}
-            title={product.title}
-            description={product.description}
-            price={product.price}
-            category={product.category}
-            rating={product.rating}
-            img={product.image}
-          />
-        ))}
-      </div>
+      {/* <div className="col-span-2"> */}
+      {products.slice(6, 7).map((product, i) => (
+        <Product
+          key={product.id}
+          title={product.title}
+          description={product.description}
+          price={product.price}
+          category={product.category}
+          rating={product.rating}
+          img={product.image}
+          colSpan={2}
+        />
+      ))}
+      {/* </div> */}
       {products.slice(7, 13).map((product, i) => (
         <Product
           key={product.id}
@@ -55,19 +57,20 @@ function ProductFeed({products}) {
           img={product.image}
         />
       ))}
-      <div className="product__col">
-        {products.slice(13, 14).map((product, i) => (
-          <Product
-            key={product.id}
-            title={product.title}
-            description={product.description}
-            price={product.price}
-            category={product.category}
-            rating={product.rating}
-            img={product.image}
-          />
-        ))}
-      </div>
+      {/* <div className="col-span-2"> */}
+      {products.slice(13, 14).map((product, i) => (
+        <Product
+          key={product.id}
+          title={product.title}
+          description={product.description}
+          price={product.price}
+          category={product.category}
+          rating={product.rating}
+          img={product.image}
+          colSpan={2}
+        />
+      ))}
+      {/* </div> */}
       {products.slice(14, products.length).map((product, i) => (
         <Product
           key={product.id}
@@ -83,4 +86,4 @@ function ProductFeed({products}) {
   );
 }
 
-export default ProductFeed
+export default ProductFeed;
