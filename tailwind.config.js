@@ -4,6 +4,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    
+    screens: {
+      'm': '571px',
+      't': '769px',
+      'l': '1041px',
+      'd': '1281px',
+    },
+  
     extend: {
       colors: {
         amazonBlue: {
@@ -18,7 +26,5 @@ module.exports = {
     },
   },
 
-  plugins: [
-    require("@tailwindcss/line-clamp"),
-  ],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
