@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */ import React from "react";
 import Image from "next/image";
-import Link from "next/Link";
 import { StarIcon } from "@heroicons/react/solid";
 function Product({
   title,
@@ -16,8 +15,6 @@ function Product({
   return (
     <div className={`product l:col-span-${colSpan}`}>
       <p className="product__category">{category}</p>
-      <Link href="https://www.instagram.com/bladerunnerrealworld/">
-
       <img
         src={img}
         alt="product"
@@ -25,8 +22,7 @@ function Product({
         width="200"
         loading="lazy"
         className="mx-auto pt-2"
-        />
-        </Link>
+      />
       <div className="product__info">
         <h2 className="product__title">{title}</h2>
         <div className="product__ratings flex ">
@@ -42,7 +38,7 @@ function Product({
         <p className="product__description line-clamp-2">{description}</p>
         <p className="product__price py-2">£{price}</p>
 
-        <div className={`product__prime product__prime--${Prime && "toggle"}`}>
+        <div className={`product__prime product__prime--${Prime && 'toggle'}`}>
           <Image
             src="https://links.papareact.com/fdw"
             width={63}
