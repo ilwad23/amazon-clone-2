@@ -13,7 +13,11 @@ module.exports = {
     },
   
     extend: {
-      colors: {
+
+      backgroundImage: {
+        'img1': "url('/img/hero-pattern.svg')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      },      colors: {
         amazonBlue: {
           light: "#232F£E",
           DEFAULT: "#131921",

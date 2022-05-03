@@ -1,33 +1,8 @@
 @use "../../util" as *;
+@use './product.scss';
 main {
-  background-color: crimson;
   height: 100vh;
-  max-width: 1040px;
+  max-width: 1440px;
   width: 100vw;
   margin: 0 auto;
-}
-.banner {
-  position: relative;
-  width: 100vw;
-  height: min-content;
-  max-width: 100%;
-  & img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    z-index: -11;
-  }
-}
-.banner__shadow {
-  @include pos-ab-t-l;
-  background: linear-gradient(
-    180deg,
-    #c01012 0%,
-    rgba(215, 212, 212, 0.0995238) 0.01%,
-    rgba(232, 225, 225, 0.39) 65.62%,
-    #e8e1e1 100%
-  );
-  height: 100%;
-  width: 100%;
-  z-index: 11;
 }
