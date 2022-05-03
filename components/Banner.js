@@ -30,6 +30,13 @@ function Banner() {
             alt="Banner"
           />
         </div>
+        <div>
+          <img
+            src="https://links.papareact.com/7ma"
+            loading="lazy"
+            alt="Banner"
+          />
+        </div>
       </Carousel>
     </div>
   );
