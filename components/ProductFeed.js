@@ -3,7 +3,7 @@ import Product from "../components/Product";
 
 function ProductFeed({ products }) {
   return (
-    <div className="products grid gap-8 grid-cols-1 t:grid-cols-2 l:grid-cols-4">
+    <div className="products grid gap-8 grid-cols-1 m:grid-cols-2 t:grid-cols-3 l:grid-cols-4">
       {products.slice(0, 4).map((product, i) => (
         <Product
           key={product.id}
